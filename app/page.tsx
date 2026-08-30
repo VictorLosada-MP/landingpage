@@ -7,19 +7,23 @@ import { QuienSoy } from '@/components/landing/quien-soy'
 import { Faq } from '@/components/landing/faq'
 import { CtaFinal } from '@/components/landing/cta-final'
 import { Footer } from '@/components/landing/footer'
+import { JsonLd } from '@/components/seo/json-ld'
 
 export default function Page() {
   return (
-    <main>
-      <Hero />
-      <Problema />
-      <Vision />
-      <Enfoque />
-      <QuienSoy />
-      {/* <CtaIntermedio /> */}
-      <Faq />
-      <CtaFinal />
+    <>
+      <JsonLd />
+      <main>
+        <Hero />
+        <Problema />
+        <Vision />
+        <Enfoque />
+        <QuienSoy />
+        {/* <CtaIntermedio /> */}
+        <Faq />
+        <CtaFinal />
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
