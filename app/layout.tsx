@@ -66,11 +66,10 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/apple-icon.png', sizes: '180x180', type: 'image/png' }],
   },
-  // Método alternativo de verificación en Google Search Console: define
-  // GOOGLE_SITE_VERIFICATION con el token de la etiqueta HTML que te da Google.
-  verification: process.env.GOOGLE_SITE_VERIFICATION
-    ? { google: process.env.GOOGLE_SITE_VERIFICATION }
-    : undefined,
+  // Verificación de la propiedad en Google Search Console (etiqueta HTML).
+  verification: {
+    google: siteConfig.googleSiteVerification,
+  },
   formatDetection: {
     telephone: false,
   },

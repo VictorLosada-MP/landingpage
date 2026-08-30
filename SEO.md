@@ -16,20 +16,24 @@ apuntan a otro sitio y no indexará bien.
 
 ## 2. Verifica la propiedad en Search Console
 
-Ve a https://search.google.com/search-console y añade una propiedad.
+**Ya está hecho en el código.** La etiqueta de verificación se inyecta sola en
+el `<head>` de todas las páginas:
 
-- **Recomendado — propiedad de dominio (DNS):** cubre `www`, sin `www`, http y
-  https de golpe. Google te da un registro `TXT`; lo añades en tu proveedor de
-  DNS. No requiere tocar el código.
-- **Alternativa — etiqueta HTML:** Google te da un token
-  (`<meta name="google-site-verification" content="TOKEN">`). Define la variable
-  de entorno y se inyecta sola en el `<head>`:
+```html
+<meta name="google-site-verification" content="u7wg8DBVUoBpyyEcSMK-7a3EJryD9vjCC2OMhLK2jvM" />
+```
 
-  ```
-  GOOGLE_SITE_VERIFICATION=TOKEN
-  ```
+El token vive en `lib/site.ts` (`GOOGLE_SITE_VERIFICATION`). Solo tienes que
+desplegar y pulsar **Verificar** en Search Console.
 
-  Despliega y pulsa *Verificar*.
+Si algún día Google te da un token distinto, cámbialo en `lib/site.ts` o
+defínelo como variable de entorno `GOOGLE_SITE_VERIFICATION` (la env var manda
+sobre el valor del código).
+
+> Nota: la verificación por **etiqueta HTML** valida un prefijo de URL concreto
+> (p. ej. `https://tudominio.com/`). Si quieres cubrir de golpe `www`, sin
+> `www`, http y https, añade además una **propiedad de dominio** verificada por
+> DNS con el registro `TXT` que te da Google.
 
 ## 3. Envía el sitemap
 

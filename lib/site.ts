@@ -8,6 +8,13 @@
  */
 const FALLBACK_URL = 'https://victorlosada.com'
 
+/**
+ * Token de la etiqueta <meta name="google-site-verification"> que da Google
+ * Search Console para verificar la propiedad del sitio. Se puede sobreescribir
+ * con la variable de entorno GOOGLE_SITE_VERIFICATION.
+ */
+const GOOGLE_SITE_VERIFICATION = 'u7wg8DBVUoBpyyEcSMK-7a3EJryD9vjCC2OMhLK2jvM'
+
 function normalize(url: string) {
   return url.replace(/\/+$/, '')
 }
@@ -20,6 +27,8 @@ export const siteConfig = {
   description:
     'Te construyo el sistema a medida, las herramientas y la capacidad real para generar ventas y contenido de forma continua, sin volver a depender de nadie.',
   locale: 'es_ES',
+  googleSiteVerification:
+    process.env.GOOGLE_SITE_VERIFICATION || GOOGLE_SITE_VERIFICATION,
   applyUrl: 'https://pageapplication-khaki.vercel.app/',
   keywords: [
     'sistemas a medida',
