@@ -15,7 +15,7 @@ export function ApplyButton({
   className,
   tone = 'light',
   size = 'lg',
-  label = 'Aplicar ahora',
+  label = 'Aplicá para construir tu sistema ',
 }: ApplyButtonProps) {
   return (
     <a
