@@ -28,7 +28,7 @@ export function Enfoque() {
 
         <div className="mt-10 max-w-2xl space-y-5 text-base leading-relaxed text-ink-muted sm:text-lg">
           <p>
-            La mayoría de soluciones terminan cuando se entrega el proyecto. Aquí el trabajo no
+            Para dueños de negocio que ya venden y quedan volando cuando algo falla. La mayoría de soluciones terminan cuando se entrega el proyecto. Aquí el trabajo no
             termina en la entrega.
           </p>
         </div>
